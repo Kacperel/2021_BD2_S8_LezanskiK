@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Stacja_narciarska
 {
-    public partial class Form1 : Form
+    public partial class Start : Form
     {
-        public Form1()
+        public Start()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
