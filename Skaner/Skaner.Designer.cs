@@ -29,15 +29,19 @@ namespace Skaner
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Skaner));
             this.label1 = new System.Windows.Forms.Label();
             this.narciarz_ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.wyciag_wybor = new System.Windows.Forms.TreeView();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.test = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.label1.Location = new System.Drawing.Point(305, 63);
             this.label1.Name = "label1";
@@ -56,6 +60,7 @@ namespace Skaner
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.label2.Location = new System.Drawing.Point(288, 203);
             this.label2.Name = "label2";
@@ -64,12 +69,40 @@ namespace Skaner
             this.label2.Text = "Wybierz wyciag";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // wyciag_wybor
+            // printPreviewDialog1
             // 
-            this.wyciag_wybor.Location = new System.Drawing.Point(249, 256);
-            this.wyciag_wybor.Name = "wyciag_wybor";
-            this.wyciag_wybor.Size = new System.Drawing.Size(324, 97);
-            this.wyciag_wybor.TabIndex = 3;
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
+            // test
+            // 
+            this.test.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.test.Location = new System.Drawing.Point(272, 356);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(270, 41);
+            this.test.TabIndex = 5;
+            this.test.Text = "Wejdz na wyciag";
+            this.test.UseVisualStyleBackColor = true;
+            this.test.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Lewy stok",
+            "Prawy stok"});
+            this.comboBox1.Location = new System.Drawing.Point(243, 269);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(329, 46);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Skaner
             // 
@@ -78,7 +111,8 @@ namespace Skaner
             this.BackgroundImage = global::Skaner.Properties.Resources.tlo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.wyciag_wybor);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.test);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.narciarz_ID);
             this.Controls.Add(this.label1);
@@ -95,7 +129,9 @@ namespace Skaner
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox narciarz_ID;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TreeView wyciag_wybor;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button test;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
