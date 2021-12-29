@@ -33,15 +33,15 @@ namespace Stacja_narciarska
             this.historyButton = new System.Windows.Forms.Button();
             this.wyciagButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
-            this.profileButton = new System.Windows.Forms.Button();
+            this.mapButton = new System.Windows.Forms.Button();
             this.blockButton = new System.Windows.Forms.Button();
             this.modButton = new System.Windows.Forms.Button();
-            this.historia1 = new Stacja_narciarska.historia();
             this.sprzedaz1 = new Stacja_narciarska.sprzedaz();
-            this.wyciagi1 = new Stacja_narciarska.wyciagi();
-            this.zmianaCen1 = new Stacja_narciarska.zmianaCen();
+            this.profil1 = new Stacja_narciarska.mapa();
             this.blokowanie1 = new Stacja_narciarska.blokowanie();
-            this.profil1 = new Stacja_narciarska.profil();
+            this.zmianaCen1 = new Stacja_narciarska.zmianaCen();
+            this.wyciagi1 = new Stacja_narciarska.wyciagi();
+            this.historia1 = new Stacja_narciarska.historia();
             this.SuspendLayout();
             // 
             // sellButton
@@ -84,15 +84,15 @@ namespace Stacja_narciarska
             this.logOutButton.UseVisualStyleBackColor = true;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
-            // profileButton
+            // mapButton
             // 
-            this.profileButton.Location = new System.Drawing.Point(0, 428);
-            this.profileButton.Name = "profileButton";
-            this.profileButton.Size = new System.Drawing.Size(95, 33);
-            this.profileButton.TabIndex = 5;
-            this.profileButton.Text = "Profil";
-            this.profileButton.UseVisualStyleBackColor = true;
-            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
+            this.mapButton.Location = new System.Drawing.Point(0, 428);
+            this.mapButton.Name = "mapButton";
+            this.mapButton.Size = new System.Drawing.Size(95, 33);
+            this.mapButton.TabIndex = 5;
+            this.mapButton.Text = "Mapa";
+            this.mapButton.UseVisualStyleBackColor = true;
+            this.mapButton.Click += new System.EventHandler(this.profileButton_Click);
             // 
             // blockButton
             // 
@@ -114,13 +114,6 @@ namespace Stacja_narciarska
             this.modButton.UseVisualStyleBackColor = true;
             this.modButton.Click += new System.EventHandler(this.modButton_Click);
             // 
-            // historia1
-            // 
-            this.historia1.Location = new System.Drawing.Point(207, 15);
-            this.historia1.Name = "historia1";
-            this.historia1.Size = new System.Drawing.Size(619, 446);
-            this.historia1.TabIndex = 10;
-            // 
             // sprzedaz1
             // 
             this.sprzedaz1.Location = new System.Drawing.Point(199, 12);
@@ -128,19 +121,12 @@ namespace Stacja_narciarska
             this.sprzedaz1.Size = new System.Drawing.Size(619, 446);
             this.sprzedaz1.TabIndex = 9;
             // 
-            // wyciagi1
+            // profil1
             // 
-            this.wyciagi1.Location = new System.Drawing.Point(199, 12);
-            this.wyciagi1.Name = "wyciagi1";
-            this.wyciagi1.Size = new System.Drawing.Size(619, 446);
-            this.wyciagi1.TabIndex = 11;
-            // 
-            // zmianaCen1
-            // 
-            this.zmianaCen1.Location = new System.Drawing.Point(207, 20);
-            this.zmianaCen1.Name = "zmianaCen1";
-            this.zmianaCen1.Size = new System.Drawing.Size(619, 446);
-            this.zmianaCen1.TabIndex = 12;
+            this.profil1.Location = new System.Drawing.Point(207, 12);
+            this.profil1.Name = "profil1";
+            this.profil1.Size = new System.Drawing.Size(619, 446);
+            this.profil1.TabIndex = 14;
             // 
             // blokowanie1
             // 
@@ -149,12 +135,26 @@ namespace Stacja_narciarska
             this.blokowanie1.Size = new System.Drawing.Size(619, 446);
             this.blokowanie1.TabIndex = 13;
             // 
-            // profil1
+            // zmianaCen1
             // 
-            this.profil1.Location = new System.Drawing.Point(207, 12);
-            this.profil1.Name = "profil1";
-            this.profil1.Size = new System.Drawing.Size(619, 446);
-            this.profil1.TabIndex = 14;
+            this.zmianaCen1.Location = new System.Drawing.Point(207, 20);
+            this.zmianaCen1.Name = "zmianaCen1";
+            this.zmianaCen1.Size = new System.Drawing.Size(619, 446);
+            this.zmianaCen1.TabIndex = 12;
+            // 
+            // wyciagi1
+            // 
+            this.wyciagi1.Location = new System.Drawing.Point(199, 12);
+            this.wyciagi1.Name = "wyciagi1";
+            this.wyciagi1.Size = new System.Drawing.Size(619, 446);
+            this.wyciagi1.TabIndex = 11;
+            // 
+            // historia1
+            // 
+            this.historia1.Location = new System.Drawing.Point(207, 15);
+            this.historia1.Name = "historia1";
+            this.historia1.Size = new System.Drawing.Size(619, 446);
+            this.historia1.TabIndex = 10;
             // 
             // panel
             // 
@@ -170,7 +170,7 @@ namespace Stacja_narciarska
             this.Controls.Add(this.historia1);
             this.Controls.Add(this.blockButton);
             this.Controls.Add(this.modButton);
-            this.Controls.Add(this.profileButton);
+            this.Controls.Add(this.mapButton);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.wyciagButton);
             this.Controls.Add(this.historyButton);
@@ -188,7 +188,7 @@ namespace Stacja_narciarska
         private System.Windows.Forms.Button historyButton;
         private System.Windows.Forms.Button wyciagButton;
         private System.Windows.Forms.Button logOutButton;
-        private System.Windows.Forms.Button profileButton;
+        private System.Windows.Forms.Button mapButton;
         private System.Windows.Forms.Button blockButton;
         private System.Windows.Forms.Button modButton;
         private sprzedaz sprzedaz1;
@@ -196,6 +196,6 @@ namespace Stacja_narciarska
         private wyciagi wyciagi1;
         private zmianaCen zmianaCen1;
         private blokowanie blokowanie1;
-        private profil profil1;
+        private mapa profil1;
     }
 }

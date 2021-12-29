@@ -43,6 +43,7 @@ namespace Stacja_narciarska
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(155, 20);
             this.login.TabIndex = 0;
+
             // 
             // password
             // 
@@ -98,7 +99,7 @@ namespace Stacja_narciarska
             this.AcceptButton = this.LogInButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 311);
+            this.ClientSize = new System.Drawing.Size(570, 307);
             this.Controls.Add(this.LogInButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

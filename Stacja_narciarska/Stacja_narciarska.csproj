@@ -115,11 +115,11 @@
     <Compile Include="panel.Designer.cs">
       <DependentUpon>panel.cs</DependentUpon>
     </Compile>
-    <Compile Include="profil.cs">
+    <Compile Include="mapa.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="profil.Designer.cs">
-      <DependentUpon>profil.cs</DependentUpon>
+    <Compile Include="mapa.Designer.cs">
+      <DependentUpon>mapa.cs</DependentUpon>
     </Compile>
     <Compile Include="sprzedaz.cs">
       <SubType>UserControl</SubType>
@@ -165,8 +165,8 @@
     <EmbeddedResource Include="panel.resx">
       <DependentUpon>panel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="profil.resx">
-      <DependentUpon>profil.cs</DependentUpon>
+    <EmbeddedResource Include="mapa.resx">
+      <DependentUpon>mapa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="sprzedaz.resx">
       <DependentUpon>sprzedaz.cs</DependentUpon>

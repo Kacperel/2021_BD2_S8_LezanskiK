@@ -36,5 +36,7 @@ namespace Stacja_narciarska
                 MessageBox.Show("Login lub hasło jest nieprawidłowe!");
             }
         }
+
+      
     }
 }

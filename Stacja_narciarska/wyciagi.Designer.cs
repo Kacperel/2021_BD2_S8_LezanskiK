@@ -29,20 +29,21 @@ namespace Stacja_narciarska
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.zablokuj = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.aktualizuj = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // checkBox1
+            // zablokuj
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(310, 75);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 0;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.zablokuj.AutoSize = true;
+            this.zablokuj.Location = new System.Drawing.Point(310, 75);
+            this.zablokuj.Name = "zablokuj";
+            this.zablokuj.Size = new System.Drawing.Size(67, 17);
+            this.zablokuj.TabIndex = 0;
+            this.zablokuj.Text = "Zablokuj";
+            this.zablokuj.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -52,22 +53,32 @@ namespace Stacja_narciarska
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
             // 
-            // button1
+            // aktualizuj
             // 
-            this.button1.Location = new System.Drawing.Point(310, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.aktualizuj.Location = new System.Drawing.Point(310, 118);
+            this.aktualizuj.Name = "aktualizuj";
+            this.aktualizuj.Size = new System.Drawing.Size(75, 23);
+            this.aktualizuj.TabIndex = 2;
+            this.aktualizuj.Text = "Aktualizuj";
+            this.aktualizuj.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(303, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Wybierz wyciag";
             // 
             // wyciagi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.aktualizuj);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.zablokuj);
             this.Name = "wyciagi";
             this.Size = new System.Drawing.Size(619, 446);
             this.ResumeLayout(false);
@@ -77,8 +88,9 @@ namespace Stacja_narciarska
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox zablokuj;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button aktualizuj;
+        private System.Windows.Forms.Label label1;
     }
 }

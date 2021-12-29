@@ -31,7 +31,7 @@ namespace Stacja_narciarska
         {
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.szukaj = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
@@ -47,18 +47,18 @@ namespace Stacja_narciarska
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(33, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Text = "Wprowadz ID";
             // 
-            // button1
+            // szukaj
             // 
-            this.button1.Location = new System.Drawing.Point(359, 39);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.szukaj.Location = new System.Drawing.Point(359, 39);
+            this.szukaj.Name = "szukaj";
+            this.szukaj.Size = new System.Drawing.Size(75, 23);
+            this.szukaj.TabIndex = 3;
+            this.szukaj.Text = "Szukaj";
+            this.szukaj.UseVisualStyleBackColor = true;
             // 
             // listView1
             // 
@@ -74,7 +74,7 @@ namespace Stacja_narciarska
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.szukaj);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.maskedTextBox1);
             this.Name = "historia";
@@ -88,7 +88,7 @@ namespace Stacja_narciarska
 
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button szukaj;
         private System.Windows.Forms.ListView listView1;
     }
 }
