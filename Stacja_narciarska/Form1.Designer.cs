@@ -105,6 +105,7 @@ namespace Stacja_narciarska
             this.Controls.Add(this.label1);
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(590, 350);
             this.MinimumSize = new System.Drawing.Size(590, 350);

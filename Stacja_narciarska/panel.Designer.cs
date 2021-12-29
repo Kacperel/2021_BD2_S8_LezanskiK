@@ -175,6 +175,7 @@ namespace Stacja_narciarska
             this.Controls.Add(this.wyciagButton);
             this.Controls.Add(this.historyButton);
             this.Controls.Add(this.sellButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "panel";
             this.ResumeLayout(false);
