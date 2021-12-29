@@ -21,5 +21,35 @@ namespace Stacja_narciarska
         {
             this.Hide();
         }
+
+        private void sellButton_Click(object sender, EventArgs e)
+        {
+            sprzedaz1.BringToFront();
+        }
+
+        private void historyButton_Click(object sender, EventArgs e)
+        {
+            historia1.BringToFront();
+        }
+
+        private void wyciagButton_Click(object sender, EventArgs e)
+        {
+            wyciagi1.BringToFront();
+        }
+
+        private void modButton_Click(object sender, EventArgs e)
+        {
+            zmianaCen1.BringToFront();
+        }
+
+        private void blockButton_Click(object sender, EventArgs e)
+        {
+            blokowanie1.BringToFront();
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            profil1.BringToFront();
+        }
     }
 }
