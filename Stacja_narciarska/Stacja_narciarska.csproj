@@ -91,11 +91,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="blokowanie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="blokowanie.Designer.cs">
+      <DependentUpon>blokowanie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="historia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="historia.Designer.cs">
+      <DependentUpon>historia.cs</DependentUpon>
     </Compile>
     <Compile Include="panel.cs">
       <SubType>Form</SubType>
@@ -103,11 +115,17 @@
     <Compile Include="panel.Designer.cs">
       <DependentUpon>panel.cs</DependentUpon>
     </Compile>
-    <Compile Include="panelAdmina.cs">
+    <Compile Include="profil.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="panelAdmina.Designer.cs">
-      <DependentUpon>panelAdmina.cs</DependentUpon>
+    <Compile Include="profil.Designer.cs">
+      <DependentUpon>profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sprzedaz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="sprzedaz.Designer.cs">
+      <DependentUpon>sprzedaz.cs</DependentUpon>
     </Compile>
     <Compile Include="Start.cs">
       <SubType>Form</SubType>
@@ -123,14 +141,35 @@
     <Compile Include="szukanieUser.Designer.cs">
       <DependentUpon>szukanieUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="wyciagi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="wyciagi.Designer.cs">
+      <DependentUpon>wyciagi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zmianaCen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="zmianaCen.Designer.cs">
+      <DependentUpon>zmianaCen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="blokowanie.resx">
+      <DependentUpon>blokowanie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="historia.resx">
+      <DependentUpon>historia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="panel.resx">
       <DependentUpon>panel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="panelAdmina.resx">
-      <DependentUpon>panelAdmina.cs</DependentUpon>
+    <EmbeddedResource Include="profil.resx">
+      <DependentUpon>profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sprzedaz.resx">
+      <DependentUpon>sprzedaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
@@ -146,6 +185,12 @@
     </Compile>
     <EmbeddedResource Include="szukanieUser.resx">
       <DependentUpon>szukanieUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wyciagi.resx">
+      <DependentUpon>wyciagi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="zmianaCen.resx">
+      <DependentUpon>zmianaCen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

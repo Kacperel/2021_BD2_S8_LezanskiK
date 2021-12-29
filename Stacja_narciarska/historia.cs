@@ -10,15 +10,11 @@ using System.Windows.Forms;
 
 namespace Stacja_narciarska
 {
-    public partial class panelAdmina : UserControl
+    public partial class historia : UserControl
     {
-        public panelAdmina()
+        public historia()
         {
             InitializeComponent();
-        }
-
-        private void logOutButton_Click(object sender, EventArgs e)
-        {
         }
     }
 }

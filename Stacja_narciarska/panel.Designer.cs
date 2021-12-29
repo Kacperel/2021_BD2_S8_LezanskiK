@@ -32,9 +32,10 @@ namespace Stacja_narciarska
             this.sellButton = new System.Windows.Forms.Button();
             this.historyButton = new System.Windows.Forms.Button();
             this.wyciagButton = new System.Windows.Forms.Button();
-            this.modButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
             this.profileButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.modButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // sellButton
@@ -64,15 +65,6 @@ namespace Stacja_narciarska
             this.wyciagButton.Text = "Wyciągi";
             this.wyciagButton.UseVisualStyleBackColor = true;
             // 
-            // modButton
-            // 
-            this.modButton.Location = new System.Drawing.Point(0, 254);
-            this.modButton.Name = "modButton";
-            this.modButton.Size = new System.Drawing.Size(193, 65);
-            this.modButton.TabIndex = 3;
-            this.modButton.Text = "Zmiana cen biletów/karnetów";
-            this.modButton.UseVisualStyleBackColor = true;
-            // 
             // logOutButton
             // 
             this.logOutButton.Location = new System.Drawing.Point(98, 428);
@@ -92,15 +84,34 @@ namespace Stacja_narciarska
             this.profileButton.Text = "Profil";
             this.profileButton.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(193, 65);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Blokowanie karnetów";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // modButton
+            // 
+            this.modButton.Location = new System.Drawing.Point(0, 253);
+            this.modButton.Name = "modButton";
+            this.modButton.Size = new System.Drawing.Size(193, 65);
+            this.modButton.TabIndex = 7;
+            this.modButton.Text = "Zmiana cen biletów/karnetów";
+            this.modButton.UseVisualStyleBackColor = true;
+            // 
             // panel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(838, 470);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.modButton);
             this.Controls.Add(this.profileButton);
             this.Controls.Add(this.logOutButton);
-            this.Controls.Add(this.modButton);
             this.Controls.Add(this.wyciagButton);
             this.Controls.Add(this.historyButton);
             this.Controls.Add(this.sellButton);
@@ -115,8 +126,9 @@ namespace Stacja_narciarska
         private System.Windows.Forms.Button sellButton;
         private System.Windows.Forms.Button historyButton;
         private System.Windows.Forms.Button wyciagButton;
-        private System.Windows.Forms.Button modButton;
         private System.Windows.Forms.Button logOutButton;
         private System.Windows.Forms.Button profileButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button modButton;
     }
 }
