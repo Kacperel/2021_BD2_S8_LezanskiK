@@ -10,28 +10,18 @@ using System.Windows.Forms;
 
 namespace Stacja_narciarska
 {
-    public partial class Start : Form
+    public partial class szukanieUser : UserControl
     {
-        public Start()
+        public szukanieUser()
         {
             InitializeComponent();
         }
 
         private void logButton_Click(object sender, EventArgs e)
         {
-            Form1 x = new Form1();
-            x.Show();
-        }
-
-        private void userControl11_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void szukanieUser1_Load(object sender, EventArgs e)
-        {
+            Form1 logForm = new Form1();
+            logForm.Show();
             
-   
         }
     }
 }
