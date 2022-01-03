@@ -16,6 +16,7 @@ namespace Stacja_narciarska
         public mapa()
         {
             InitializeComponent();
+            /*
             NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
             conn.Open();
             NpgsqlCommand comm = new NpgsqlCommand();
@@ -31,11 +32,9 @@ namespace Stacja_narciarska
             }
             comm.Dispose();
             conn.Close();
+            */
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

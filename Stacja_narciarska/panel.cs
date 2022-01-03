@@ -47,9 +47,9 @@ namespace Stacja_narciarska
             blokowanie1.BringToFront();
         }
 
-        private void profileButton_Click(object sender, EventArgs e)
+        private void mapButton_Click(object sender, EventArgs e)
         {
-            profil1.BringToFront();
+            mapa1.BringToFront();
         }
     }
 }

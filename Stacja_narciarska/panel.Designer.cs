@@ -29,6 +29,7 @@ namespace Stacja_narciarska
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(panel));
             this.sellButton = new System.Windows.Forms.Button();
             this.historyButton = new System.Windows.Forms.Button();
             this.wyciagButton = new System.Windows.Forms.Button();
@@ -37,11 +38,12 @@ namespace Stacja_narciarska
             this.blockButton = new System.Windows.Forms.Button();
             this.modButton = new System.Windows.Forms.Button();
             this.sprzedaz1 = new Stacja_narciarska.sprzedaz();
-            this.profil1 = new Stacja_narciarska.mapa();
             this.blokowanie1 = new Stacja_narciarska.blokowanie();
             this.zmianaCen1 = new Stacja_narciarska.zmianaCen();
             this.wyciagi1 = new Stacja_narciarska.wyciagi();
             this.historia1 = new Stacja_narciarska.historia();
+            this.mapa1 = new Stacja_narciarska.mapa();
+            this.profil1 = new Stacja_narciarska.mapa();
             this.SuspendLayout();
             // 
             // sellButton
@@ -92,7 +94,7 @@ namespace Stacja_narciarska
             this.mapButton.TabIndex = 5;
             this.mapButton.Text = "Mapa";
             this.mapButton.UseVisualStyleBackColor = true;
-            this.mapButton.Click += new System.EventHandler(this.profileButton_Click);
+            this.mapButton.Click += new System.EventHandler(this.mapButton_Click);
             // 
             // blockButton
             // 
@@ -121,23 +123,16 @@ namespace Stacja_narciarska
             this.sprzedaz1.Size = new System.Drawing.Size(619, 446);
             this.sprzedaz1.TabIndex = 9;
             // 
-            // profil1
-            // 
-            this.profil1.Location = new System.Drawing.Point(207, 12);
-            this.profil1.Name = "profil1";
-            this.profil1.Size = new System.Drawing.Size(619, 446);
-            this.profil1.TabIndex = 14;
-            // 
             // blokowanie1
             // 
-            this.blokowanie1.Location = new System.Drawing.Point(207, 12);
+            this.blokowanie1.Location = new System.Drawing.Point(199, 12);
             this.blokowanie1.Name = "blokowanie1";
             this.blokowanie1.Size = new System.Drawing.Size(619, 446);
             this.blokowanie1.TabIndex = 13;
             // 
             // zmianaCen1
             // 
-            this.zmianaCen1.Location = new System.Drawing.Point(207, 20);
+            this.zmianaCen1.Location = new System.Drawing.Point(199, 12);
             this.zmianaCen1.Name = "zmianaCen1";
             this.zmianaCen1.Size = new System.Drawing.Size(619, 446);
             this.zmianaCen1.TabIndex = 12;
@@ -151,10 +146,26 @@ namespace Stacja_narciarska
             // 
             // historia1
             // 
-            this.historia1.Location = new System.Drawing.Point(207, 15);
+            this.historia1.Location = new System.Drawing.Point(199, 12);
             this.historia1.Name = "historia1";
             this.historia1.Size = new System.Drawing.Size(619, 446);
             this.historia1.TabIndex = 10;
+            // 
+            // mapa1
+            // 
+            this.mapa1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("mapa1.BackgroundImage")));
+            this.mapa1.Location = new System.Drawing.Point(199, 12);
+            this.mapa1.Name = "mapa1";
+            this.mapa1.Size = new System.Drawing.Size(619, 446);
+            this.mapa1.TabIndex = 14;
+            // 
+            // profil1
+            // 
+            this.profil1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("profil1.BackgroundImage")));
+            this.profil1.Location = new System.Drawing.Point(207, 12);
+            this.profil1.Name = "profil1";
+            this.profil1.Size = new System.Drawing.Size(619, 446);
+            this.profil1.TabIndex = 14;
             // 
             // panel
             // 
@@ -163,7 +174,6 @@ namespace Stacja_narciarska
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(838, 470);
             this.Controls.Add(this.sprzedaz1);
-            //this.Controls.Add(this.profil1);
             this.Controls.Add(this.blokowanie1);
             this.Controls.Add(this.zmianaCen1);
             this.Controls.Add(this.wyciagi1);
@@ -175,6 +185,7 @@ namespace Stacja_narciarska
             this.Controls.Add(this.wyciagButton);
             this.Controls.Add(this.historyButton);
             this.Controls.Add(this.sellButton);
+            this.Controls.Add(this.mapa1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "panel";
@@ -197,5 +208,6 @@ namespace Stacja_narciarska
         private zmianaCen zmianaCen1;
         private blokowanie blokowanie1;
         private mapa profil1;
+        private mapa mapa1;
     }
 }
