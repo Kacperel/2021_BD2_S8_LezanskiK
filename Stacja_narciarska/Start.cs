@@ -33,5 +33,10 @@ namespace Stacja_narciarska
             
    
         }
+
+        private void szukanieUser1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

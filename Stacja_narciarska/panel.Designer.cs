@@ -163,7 +163,7 @@ namespace Stacja_narciarska
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(838, 470);
             this.Controls.Add(this.sprzedaz1);
-            this.Controls.Add(this.profil1);
+            //this.Controls.Add(this.profil1);
             this.Controls.Add(this.blokowanie1);
             this.Controls.Add(this.zmianaCen1);
             this.Controls.Add(this.wyciagi1);

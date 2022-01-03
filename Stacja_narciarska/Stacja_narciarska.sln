@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stacja_narciarska", "Stacja
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skaner", "..\Skaner\Skaner.csproj", "{4BD3FAD9-4FA9-41CA-AB74-65D5506F9EFF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5285A4B2-A069-40EC-B91F-4A6068098D76}"
+	ProjectSection(SolutionItems) = preProject
+		connect.cs = connect.cs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

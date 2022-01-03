@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Stacja_narciarska
 {
@@ -15,6 +16,7 @@ namespace Stacja_narciarska
         public Form1()
         {
             InitializeComponent();
+         
         }
 
         private void userControl11_Load(object sender, EventArgs e)
@@ -24,7 +26,14 @@ namespace Stacja_narciarska
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            if (login.Text == "admin" && password.Text == "admin")
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn.Open();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = conn;
+            comm.CommandType = CommandType.Text;
+            comm.CommandText = "SELECT login, haslo FROM public.pracownicy where login='"+login.Text+"'and haslo='"+password.Text+"'";
+            NpgsqlDataReader dr = comm.ExecuteReader();
+            if (dr.HasRows)
             {
                 this.Hide();
                 panel x = new panel();
@@ -35,8 +44,9 @@ namespace Stacja_narciarska
             {
                 MessageBox.Show("Login lub hasło jest nieprawidłowe!");
             }
+            comm.Dispose();
+            conn.Close();
         }
 
-      
     }
 }
