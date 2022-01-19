@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Stacja_narciarska
 {
@@ -15,6 +16,12 @@ namespace Stacja_narciarska
         public panel()
         {
             InitializeComponent();
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn.Open();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = conn;
+            
+            
         }
 
         private void logOutButton_Click(object sender, EventArgs e)
@@ -50,6 +57,17 @@ namespace Stacja_narciarska
         private void mapButton_Click(object sender, EventArgs e)
         {
             mapa1.BringToFront();
+        }
+
+        private void sprzedaz1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Load(object sender, EventArgs e)
+        {
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn.Close();
         }
     }
 }

@@ -35,6 +35,9 @@ namespace Stacja_narciarska
             */
         }
 
-       
+        private void mapa_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

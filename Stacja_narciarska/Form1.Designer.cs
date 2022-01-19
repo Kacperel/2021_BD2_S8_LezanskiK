@@ -43,7 +43,7 @@ namespace Stacja_narciarska
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(155, 20);
             this.login.TabIndex = 0;
-
+            this.login.TextChanged += new System.EventHandler(this.login_TextChanged);
             // 
             // password
             // 
@@ -111,6 +111,7 @@ namespace Stacja_narciarska
             this.MaximumSize = new System.Drawing.Size(590, 350);
             this.MinimumSize = new System.Drawing.Size(590, 350);
             this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

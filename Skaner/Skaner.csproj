@@ -99,6 +99,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stacja_narciarskaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stacja_narciarskaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Stacja_narciarskaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stacja_narciarskaDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Skaner.resx">
       <DependentUpon>Skaner.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +132,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Stacja_narciarskaDataSet.xsc">
+      <DependentUpon>Stacja_narciarskaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Stacja_narciarskaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stacja_narciarskaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stacja_narciarskaDataSet.xss">
+      <DependentUpon>Stacja_narciarskaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Stacja_narciarskaDataSet1.xsc">
+      <DependentUpon>Stacja_narciarskaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Stacja_narciarskaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Stacja_narciarskaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Stacja_narciarskaDataSet1.xss">
+      <DependentUpon>Stacja_narciarskaDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

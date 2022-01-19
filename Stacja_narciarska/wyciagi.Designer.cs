@@ -29,38 +29,31 @@ namespace Stacja_narciarska
         /// </summary>
         private void InitializeComponent()
         {
-            this.zablokuj = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.wybor_wyciagu = new System.Windows.Forms.ComboBox();
             this.aktualizuj = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.zablokowany = new System.Windows.Forms.RadioButton();
+            this.odblokowany = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // zablokuj
+            // wybor_wyciagu
             // 
-            this.zablokuj.AutoSize = true;
-            this.zablokuj.Location = new System.Drawing.Point(310, 75);
-            this.zablokuj.Name = "zablokuj";
-            this.zablokuj.Size = new System.Drawing.Size(67, 17);
-            this.zablokuj.TabIndex = 0;
-            this.zablokuj.Text = "Zablokuj";
-            this.zablokuj.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(285, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.wybor_wyciagu.FormattingEnabled = true;
+            this.wybor_wyciagu.Location = new System.Drawing.Point(285, 32);
+            this.wybor_wyciagu.Name = "wybor_wyciagu";
+            this.wybor_wyciagu.Size = new System.Drawing.Size(121, 21);
+            this.wybor_wyciagu.TabIndex = 1;
+            this.wybor_wyciagu.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // aktualizuj
             // 
-            this.aktualizuj.Location = new System.Drawing.Point(310, 118);
+            this.aktualizuj.Location = new System.Drawing.Point(306, 120);
             this.aktualizuj.Name = "aktualizuj";
             this.aktualizuj.Size = new System.Drawing.Size(75, 23);
             this.aktualizuj.TabIndex = 2;
             this.aktualizuj.Text = "Aktualizuj";
             this.aktualizuj.UseVisualStyleBackColor = true;
+            this.aktualizuj.Click += new System.EventHandler(this.aktualizuj_Click);
             // 
             // label1
             // 
@@ -71,14 +64,38 @@ namespace Stacja_narciarska
             this.label1.TabIndex = 3;
             this.label1.Text = "Wybierz wyciag";
             // 
+            // zablokowany
+            // 
+            this.zablokowany.AutoSize = true;
+            this.zablokowany.Location = new System.Drawing.Point(296, 74);
+            this.zablokowany.Name = "zablokowany";
+            this.zablokowany.Size = new System.Drawing.Size(89, 17);
+            this.zablokowany.TabIndex = 4;
+            this.zablokowany.TabStop = true;
+            this.zablokowany.Text = "Zablokowany";
+            this.zablokowany.UseVisualStyleBackColor = true;
+            this.zablokowany.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // odblokowany
+            // 
+            this.odblokowany.AutoSize = true;
+            this.odblokowany.Location = new System.Drawing.Point(296, 97);
+            this.odblokowany.Name = "odblokowany";
+            this.odblokowany.Size = new System.Drawing.Size(90, 17);
+            this.odblokowany.TabIndex = 5;
+            this.odblokowany.TabStop = true;
+            this.odblokowany.Text = "Odblokowany";
+            this.odblokowany.UseVisualStyleBackColor = true;
+            // 
             // wyciagi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.odblokowany);
+            this.Controls.Add(this.zablokowany);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aktualizuj);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.zablokuj);
+            this.Controls.Add(this.wybor_wyciagu);
             this.Name = "wyciagi";
             this.Size = new System.Drawing.Size(619, 446);
             this.ResumeLayout(false);
@@ -87,10 +104,10 @@ namespace Stacja_narciarska
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckBox zablokuj;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox wybor_wyciagu;
         private System.Windows.Forms.Button aktualizuj;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton zablokowany;
+        private System.Windows.Forms.RadioButton odblokowany;
     }
 }

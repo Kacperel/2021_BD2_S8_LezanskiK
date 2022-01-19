@@ -39,6 +39,7 @@ namespace Stacja_narciarska
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.Name = "mapa";
             this.Size = new System.Drawing.Size(619, 446);
+            this.Load += new System.EventHandler(this.mapa_Load);
             this.ResumeLayout(false);
 
         }

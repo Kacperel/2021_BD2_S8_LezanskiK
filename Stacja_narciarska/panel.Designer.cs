@@ -122,6 +122,7 @@ namespace Stacja_narciarska
             this.sprzedaz1.Name = "sprzedaz1";
             this.sprzedaz1.Size = new System.Drawing.Size(619, 446);
             this.sprzedaz1.TabIndex = 9;
+            this.sprzedaz1.Load += new System.EventHandler(this.sprzedaz1_Load);
             // 
             // blokowanie1
             // 
@@ -189,6 +190,7 @@ namespace Stacja_narciarska
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "panel";
+            this.Load += new System.EventHandler(this.panel_Load);
             this.ResumeLayout(false);
 
         }

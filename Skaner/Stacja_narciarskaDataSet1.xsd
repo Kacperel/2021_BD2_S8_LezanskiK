@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Stacja_narciarskaDataSet1" targetNamespace="http://tempuri.org/Stacja_narciarskaDataSet1.xsd" xmlns:mstns="http://tempuri.org/Stacja_narciarskaDataSet1.xsd" xmlns="http://tempuri.org/Stacja_narciarskaDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Stacja_narciarskaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Stacja_narciarskaConnectionString (Settings)" PropertyReference="ApplicationSettings.Skaner.Properties.Settings.GlobalReference.Default.Stacja_narciarskaConnectionString" Provider="System.Data.Odbc" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="wyciagTableAdapter" GeneratorDataComponentClassName="wyciagTableAdapter" Name="wyciag" UserDataComponentName="wyciagTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Stacja_narciarskaConnectionString (Settings)" DbObjectName="Stacja_narciarska.wyciag" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT "nazwa_wyciagu" FROM "public"."wyciag"</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="nazwa_wyciagu" DataSetColumn="nazwa_wyciagu" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Stacja_narciarskaDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Stacja_narciarskaDataSet1" msprop:Generator_UserDSName="Stacja_narciarskaDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="wyciag" msprop:Generator_TableClassName="wyciagDataTable" msprop:Generator_TableVarName="tablewyciag" msprop:Generator_TablePropName="wyciag" msprop:Generator_RowDeletingName="wyciagRowDeleting" msprop:Generator_RowChangingName="wyciagRowChanging" msprop:Generator_RowEvHandlerName="wyciagRowChangeEventHandler" msprop:Generator_RowDeletedName="wyciagRowDeleted" msprop:Generator_UserTableName="wyciag" msprop:Generator_RowChangedName="wyciagRowChanged" msprop:Generator_RowEvArgName="wyciagRowChangeEvent" msprop:Generator_RowClassName="wyciagRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="nazwa_wyciagu" msprop:Generator_ColumnVarNameInTable="columnnazwa_wyciagu" msprop:Generator_ColumnPropNameInRow="nazwa_wyciagu" msprop:Generator_ColumnPropNameInTable="nazwa_wyciaguColumn" msprop:Generator_UserColumnName="nazwa_wyciagu">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

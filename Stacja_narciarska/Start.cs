@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
 
 namespace Stacja_narciarska
 {
@@ -15,6 +16,8 @@ namespace Stacja_narciarska
         public Start()
         {
             InitializeComponent();
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn.Open();
         }
 
         private void logButton_Click(object sender, EventArgs e)

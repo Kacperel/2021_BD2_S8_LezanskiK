@@ -29,19 +29,20 @@ namespace Stacja_narciarska
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.podaneID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.odblokowany = new System.Windows.Forms.RadioButton();
             this.zablokowany = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // textBox1
+            // podaneID
             // 
-            this.textBox1.Location = new System.Drawing.Point(366, 128);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.podaneID.Location = new System.Drawing.Point(366, 128);
+            this.podaneID.Name = "podaneID";
+            this.podaneID.Size = new System.Drawing.Size(100, 20);
+            this.podaneID.TabIndex = 0;
+            this.podaneID.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -60,6 +61,7 @@ namespace Stacja_narciarska
             this.button1.TabIndex = 2;
             this.button1.Text = "Aktualizuj";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // odblokowany
             // 
@@ -91,7 +93,7 @@ namespace Stacja_narciarska
             this.Controls.Add(this.odblokowany);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.podaneID);
             this.Name = "blokowanie";
             this.Size = new System.Drawing.Size(619, 446);
             this.ResumeLayout(false);
@@ -101,7 +103,7 @@ namespace Stacja_narciarska
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox podaneID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.RadioButton odblokowany;
