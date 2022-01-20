@@ -141,6 +141,12 @@
     <Compile Include="szukanieUser.Designer.cs">
       <DependentUpon>szukanieUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="szukanie_biletu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="szukanie_biletu.Designer.cs">
+      <DependentUpon>szukanie_biletu.cs</DependentUpon>
+    </Compile>
     <Compile Include="wyciagi.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="szukanieUser.resx">
       <DependentUpon>szukanieUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="szukanie_biletu.resx">
+      <DependentUpon>szukanie_biletu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="wyciagi.resx">
       <DependentUpon>wyciagi.cs</DependentUpon>

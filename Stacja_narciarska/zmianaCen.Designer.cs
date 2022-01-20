@@ -119,6 +119,7 @@ namespace Stacja_narciarska
             this.cena_karnet.Name = "cena_karnet";
             this.cena_karnet.Size = new System.Drawing.Size(100, 20);
             this.cena_karnet.TabIndex = 6;
+            this.cena_karnet.TextChanged += new System.EventHandler(this.cena_karnet_TextChanged);
             // 
             // lista_karnety
             // 

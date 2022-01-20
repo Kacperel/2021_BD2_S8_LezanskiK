@@ -53,6 +53,7 @@ namespace Stacja_narciarska
             this.password.PasswordChar = '*';
             this.password.Size = new System.Drawing.Size(155, 20);
             this.password.TabIndex = 1;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label1
             // 
@@ -107,6 +108,7 @@ namespace Stacja_narciarska
             this.Controls.Add(this.password);
             this.Controls.Add(this.login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(590, 350);
             this.MinimumSize = new System.Drawing.Size(590, 350);

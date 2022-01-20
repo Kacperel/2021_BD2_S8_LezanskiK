@@ -34,9 +34,9 @@ namespace Stacja_narciarska
             // 
             // szukanieUser1
             // 
-            this.szukanieUser1.Location = new System.Drawing.Point(-1, -1);
+            this.szukanieUser1.Location = new System.Drawing.Point(-3, 0);
             this.szukanieUser1.Name = "szukanieUser1";
-            this.szukanieUser1.Size = new System.Drawing.Size(829, 452);
+            this.szukanieUser1.Size = new System.Drawing.Size(809, 452);
             this.szukanieUser1.TabIndex = 2;
             this.szukanieUser1.Load += new System.EventHandler(this.szukanieUser1_Load_1);
             // 

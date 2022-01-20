@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Npgsql;
+
+
 
 namespace Stacja_narciarska
 {
+    
     public partial class szukanieUser : UserControl
     {
+        private string podany_ID_karnetu="";
+
         public szukanieUser()
         {
             InitializeComponent();
@@ -22,6 +28,46 @@ namespace Stacja_narciarska
             Form1 logForm = new Form1();
             logForm.Show();
             
+        }
+
+        private void findIdButton_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(textBox1.Text))
+            {
+                NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+                conn.Open();
+
+                NpgsqlCommand comm = new NpgsqlCommand();
+                comm.Connection = conn;
+                comm.CommandType = CommandType.Text;
+                comm.CommandText = "SELECT id_karnet FROM public.karnet where id_karnet='" + textBox1.Text + "'";
+                NpgsqlDataReader dr = comm.ExecuteReader();
+
+                if (dr.HasRows)
+                {
+                    podany_ID_karnetu = textBox1.Text;
+                    szukanie_biletu x = new szukanie_biletu();
+                    x.Show();
+                }
+
+                else
+                {
+                    MessageBox.Show("Dane ID nie istanieje.");
+                }
+
+                comm.Dispose();
+                conn.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("Nie podano ID karnetu!");
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

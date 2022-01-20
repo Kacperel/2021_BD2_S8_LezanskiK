@@ -17,10 +17,10 @@ namespace Stacja_narciarska
 public zmianaCen()
         {
             InitializeComponent();
-            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
-            conn.Open();
+            NpgsqlConnection conn7 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn7.Open();
             NpgsqlCommand comm = new NpgsqlCommand();
-            comm.Connection = conn;
+            comm.Connection = conn7;
             comm.CommandType = CommandType.Text;
             comm.CommandText = "SELECT nazwa FROM public.rodzaj_karnetu";
             NpgsqlDataReader dr = comm.ExecuteReader();
@@ -39,7 +39,7 @@ public zmianaCen()
 
             }
             comm.Dispose();
-            conn.Close();
+            conn7.Close();
 
             NpgsqlConnection conn2 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
             conn2.Open();
@@ -101,18 +101,23 @@ public zmianaCen()
 
         private void bilet_update_Click(object sender, EventArgs e)
         {
-            NpgsqlConnection conn3 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
-            conn3.Open();
+            NpgsqlConnection conn4 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn4.Open();
 
-            NpgsqlCommand comm3 = new NpgsqlCommand();
-            comm3.Connection = conn3;
-            comm3.CommandType = CommandType.Text;
-            comm3.CommandText = "UPDATE public.cena_biletu SET cena_biletu='" + cena_bilet.Text + "' WHERE rodzaj_biletu_id_rodzaj_biletu = (SELECT id_rodzaj_biletu FROM public.rodzaj_biletu WHERE nazwa='" + lista_bilety.Text + "')";
-            comm3.ExecuteNonQuery();
+            NpgsqlCommand comm4 = new NpgsqlCommand();
+            comm4.Connection = conn4;
+            comm4.CommandType = CommandType.Text;
+            comm4.CommandText = "UPDATE public.cena_biletu SET cena_biletu='" + cena_bilet.Text + "' WHERE rodzaj_biletu_id_rodzaj_biletu = (SELECT id_rodzaj_biletu FROM public.rodzaj_biletu WHERE nazwa='" + lista_bilety.Text + "')";
+            comm4.ExecuteNonQuery();
             MessageBox.Show("Zaktualizowano pomyslnie");
 
-            comm3.Dispose();
-            conn3.Close();
+            comm4.Dispose();
+            conn4.Close();
+        }
+
+        private void cena_karnet_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
