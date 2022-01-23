@@ -44,14 +44,14 @@ namespace Stacja_narciarska
             // lista_bilety
             // 
             this.lista_bilety.FormattingEnabled = true;
-            this.lista_bilety.Location = new System.Drawing.Point(327, 85);
+            this.lista_bilety.Location = new System.Drawing.Point(327, 102);
             this.lista_bilety.Name = "lista_bilety";
             this.lista_bilety.Size = new System.Drawing.Size(121, 21);
             this.lista_bilety.TabIndex = 0;
             // 
             // cena_bilet
             // 
-            this.cena_bilet.Location = new System.Drawing.Point(327, 149);
+            this.cena_bilet.Location = new System.Drawing.Point(327, 166);
             this.cena_bilet.Name = "cena_bilet";
             this.cena_bilet.Size = new System.Drawing.Size(100, 20);
             this.cena_bilet.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Stacja_narciarska
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(324, 69);
+            this.label1.Location = new System.Drawing.Point(324, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace Stacja_narciarska
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(324, 133);
+            this.label2.Location = new System.Drawing.Point(324, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 13);
             this.label2.TabIndex = 3;
@@ -77,7 +77,7 @@ namespace Stacja_narciarska
             // 
             // bilet_update
             // 
-            this.bilet_update.Location = new System.Drawing.Point(337, 185);
+            this.bilet_update.Location = new System.Drawing.Point(337, 202);
             this.bilet_update.Name = "bilet_update";
             this.bilet_update.Size = new System.Drawing.Size(75, 23);
             this.bilet_update.TabIndex = 4;
