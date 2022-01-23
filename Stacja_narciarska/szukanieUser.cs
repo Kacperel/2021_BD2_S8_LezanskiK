@@ -16,7 +16,7 @@ namespace Stacja_narciarska
     
     public partial class szukanieUser : UserControl
     {
-        private string podany_ID_karnetu="";
+        public static string setValue = "";
 
         public szukanieUser()
         {
@@ -45,14 +45,13 @@ namespace Stacja_narciarska
 
                 if (dr.HasRows)
                 {
-                    podany_ID_karnetu = textBox1.Text;
-                    szukanie_biletu x = new szukanie_biletu();
+                    
+                    szukanie_biletu x = new szukanie_biletu(textBox1.Text);
                     x.Show();
                 }
-
                 else
                 {
-                    MessageBox.Show("Dane ID nie istanieje.");
+                    MessageBox.Show("Dane ID nie istnieje.");
                 }
 
                 comm.Dispose();

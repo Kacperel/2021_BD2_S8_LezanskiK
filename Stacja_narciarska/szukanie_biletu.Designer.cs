@@ -29,25 +29,25 @@ namespace Stacja_narciarska
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lista = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // listView1
+            // lista
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(776, 426);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lista.HideSelection = false;
+            this.lista.Location = new System.Drawing.Point(12, 12);
+            this.lista.Name = "lista";
+            this.lista.Size = new System.Drawing.Size(776, 426);
+            this.lista.TabIndex = 0;
+            this.lista.UseCompatibleStateImageBehavior = false;
+            this.lista.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // szukanie_biletu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lista);
             this.Name = "szukanie_biletu";
             this.Text = "szukanie_biletu";
             this.ResumeLayout(false);
@@ -56,6 +56,6 @@ namespace Stacja_narciarska
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lista;
     }
 }

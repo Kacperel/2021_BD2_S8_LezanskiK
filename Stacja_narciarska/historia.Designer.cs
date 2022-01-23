@@ -29,18 +29,18 @@ namespace Stacja_narciarska
         /// </summary>
         private void InitializeComponent()
         {
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.podaneID = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.szukaj = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lista = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // maskedTextBox1
+            // podaneID
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(36, 39);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(293, 20);
-            this.maskedTextBox1.TabIndex = 1;
+            this.podaneID.Location = new System.Drawing.Point(36, 39);
+            this.podaneID.Name = "podaneID";
+            this.podaneID.Size = new System.Drawing.Size(293, 20);
+            this.podaneID.TabIndex = 1;
             // 
             // label1
             // 
@@ -59,24 +59,26 @@ namespace Stacja_narciarska
             this.szukaj.TabIndex = 3;
             this.szukaj.Text = "Szukaj";
             this.szukaj.UseVisualStyleBackColor = true;
+            this.szukaj.Click += new System.EventHandler(this.szukaj_Click);
             // 
-            // listView1
+            // lista
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(25, 88);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(408, 306);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.lista.HideSelection = false;
+            this.lista.Location = new System.Drawing.Point(25, 88);
+            this.lista.Name = "lista";
+            this.lista.Size = new System.Drawing.Size(408, 306);
+            this.lista.TabIndex = 4;
+            this.lista.UseCompatibleStateImageBehavior = false;
+            this.lista.SelectedIndexChanged += new System.EventHandler(this.lista_SelectedIndexChanged);
             // 
             // historia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lista);
             this.Controls.Add(this.szukaj);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.podaneID);
             this.Name = "historia";
             this.Size = new System.Drawing.Size(619, 446);
             this.ResumeLayout(false);
@@ -86,9 +88,9 @@ namespace Stacja_narciarska
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox podaneID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button szukaj;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lista;
     }
 }
