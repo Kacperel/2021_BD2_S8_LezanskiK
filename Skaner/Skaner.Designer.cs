@@ -36,7 +36,7 @@ namespace Skaner
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.test = new System.Windows.Forms.Button();
             this.wybrany_wyciag = new System.Windows.Forms.ComboBox();
-            this.rodzaj_wejscia = new System.Windows.Forms.ComboBox();
+            this.rodzajWejscia = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -104,17 +104,18 @@ namespace Skaner
             this.wybrany_wyciag.TabIndex = 6;
             this.wybrany_wyciag.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // rodzaj_wejscia
+            // rodzajWejscia
             // 
-            this.rodzaj_wejscia.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.rodzaj_wejscia.FormattingEnabled = true;
-            this.rodzaj_wejscia.Items.AddRange(new object[] {
+            this.rodzajWejscia.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.rodzajWejscia.FormattingEnabled = true;
+            this.rodzajWejscia.Items.AddRange(new object[] {
             "Bilet",
             "Karnet"});
-            this.rodzaj_wejscia.Location = new System.Drawing.Point(243, 206);
-            this.rodzaj_wejscia.Name = "rodzaj_wejscia";
-            this.rodzaj_wejscia.Size = new System.Drawing.Size(329, 46);
-            this.rodzaj_wejscia.TabIndex = 7;
+            this.rodzajWejscia.Location = new System.Drawing.Point(243, 206);
+            this.rodzajWejscia.Name = "rodzajWejscia";
+            this.rodzajWejscia.Size = new System.Drawing.Size(329, 46);
+            this.rodzajWejscia.TabIndex = 7;
+            this.rodzajWejscia.SelectedIndexChanged += new System.EventHandler(this.rodzajWejscia_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -137,7 +138,7 @@ namespace Skaner
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.rodzaj_wejscia);
+            this.Controls.Add(this.rodzajWejscia);
             this.Controls.Add(this.wybrany_wyciag);
             this.Controls.Add(this.test);
             this.Controls.Add(this.label2);
@@ -159,7 +160,7 @@ namespace Skaner
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.Button test;
         private System.Windows.Forms.ComboBox wybrany_wyciag;
-        private System.Windows.Forms.ComboBox rodzaj_wejscia;
+        private System.Windows.Forms.ComboBox rodzajWejscia;
         private System.Windows.Forms.Label label3;
     }
 }

@@ -46,6 +46,7 @@ namespace Stacja_narciarska
             this.rodzajWejscia.Name = "rodzajWejscia";
             this.rodzajWejscia.Size = new System.Drawing.Size(121, 21);
             this.rodzajWejscia.TabIndex = 1;
+            this.rodzajWejscia.SelectedIndexChanged += new System.EventHandler(this.rodzajWejscia_SelectedIndexChanged);
             // 
             // potwierdz
             // 

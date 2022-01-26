@@ -137,5 +137,10 @@ namespace Stacja_narciarska
                 MessageBox.Show("Nie wybrabo wejscia");
             }
         }
+
+        private void rodzajWejscia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
