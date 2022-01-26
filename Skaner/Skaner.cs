@@ -17,7 +17,29 @@ namespace Skaner
         public Skaner()
         {
             InitializeComponent();
+            NpgsqlConnection conn5 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+            conn5.Open();
+            NpgsqlCommand comm5 = new NpgsqlCommand();
+            comm5.Connection = conn5;
+            comm5.CommandType = CommandType.Text;
+            comm5.CommandText = "SELECT nazwa_wyciagu FROM public.wyciag";
+            NpgsqlDataReader dr5 = comm5.ExecuteReader();
+            if (dr5.HasRows)
+            {
+                // DataTable dt = new DataTable();
+                // dt.Load(dr);
+                //comboBox1.DataSource = dt;
+                //comboBox1.Items.Add(dr);
+                while (dr5.Read())
+                {
+                    wybrany_wyciag.Items.Add(dr5[0].ToString());
+                }
 
+
+
+            }
+            comm5.Dispose();
+            conn5.Close();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -53,38 +75,56 @@ namespace Skaner
                         NpgsqlCommand comm = new NpgsqlCommand();
                         comm.Connection = conn;
                         comm.CommandType = CommandType.Text;
-                        comm.CommandText = "SELECT id_karnet FROM public.karnet where id_karnet='" + narciarz_ID.Text + "'";
-                        NpgsqlDataReader dr = comm.ExecuteReader();
-
-                        if (dr.HasRows)
+                        if (rodzajWejscia.Text == "karnet")
                         {
-                            NpgsqlConnection conn7 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
-                            conn7.Open();
-                            NpgsqlCommand comm2 = new NpgsqlCommand();
-                            comm2.Connection = conn7;
-                            comm2.CommandType = CommandType.Text;
-                            if (rodzajWejscia.Text == "bilet")
+                            comm.CommandText = "SELECT id_karnet FROM public.karnet where id_karnet='" + narciarz_ID.Text + "'";
+                            NpgsqlDataReader dr = comm.ExecuteReader();
+                            if (dr.HasRows)
                             {
-                                comm2.CommandText = "INSERT INTO public.historia(data, sposob_wejscia, rozklad_wyciagu_id_rozklad, bilet_id_bilet) SELECT current_timestamp, 'bilet', id_rozklad, '" + narciarz_ID.Text + "'  FROM public.rozklad_wyciagu rz INNER JOIN public.wyciag wy on wy.id_wyciag = rz.id_wyciag WHERE wy.nazwa_wyciagu='" + wybrany_wyciag.Text + "'";
+                                NpgsqlConnection conn7 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+                                conn7.Open();
+                                NpgsqlCommand comm2 = new NpgsqlCommand();
+                                comm2.Connection = conn7;
+                                comm2.CommandType = CommandType.Text;
+                                comm2.CommandText = "INSERT INTO public.historia(data, sposob_wejscia,  rozklad_wyciagu_id_rozklad, karnet_id_karnet) SELECT current_timestamp, 'karnet', id_rozklad, '" + narciarz_ID.Text + "'  FROM public.rozklad_wyciagu rz INNER JOIN public.wyciag wy on wy.id_wyciag = rz.id_wyciag WHERE wy.nazwa_wyciagu='" + wybrany_wyciag.Text + "'";
+                                comm2.ExecuteNonQuery();
+
+                                comm2.Dispose();
+                                conn7.Close();
+                                MessageBox.Show("Mozna wejsc na stok.");
+
                             }
-                            else if (rodzajWejscia.Text == "karnet")
+                            else
                             {
-                                comm2.CommandText = "INSERT INTO public.historia(data, sposob_wejscia, rozklad_wyciagu_id_rozklad, karnet_id_karnet) SELECT current_timestamp, 'karnet', id_rozklad, '" + narciarz_ID.Text + "'  FROM public.rozklad_wyciagu rz INNER JOIN public.wyciag wy on wy.id_wyciag = rz.id_wyciag WHERE wy.nazwa_wyciagu='" + wybrany_wyciag.Text + "'";
+                                MessageBox.Show("Dane ID nie istnieje.");
                             }
-
-                            NpgsqlDataReader dr2 = comm2.ExecuteReader();
-
-                            comm2.Dispose();
-                            conn7.Close();
-
-                            MessageBox.Show("Mozna wejsc na stok.");
-
-
                         }
-                        else
+                        else if (rodzajWejscia.Text == "bilet")
                         {
-                            MessageBox.Show("Dane ID nie istnieje.");
+                            comm.CommandText = "SELECT id_bilet FROM public.bilet where id_bilet='" + narciarz_ID.Text + "'";
+                            NpgsqlDataReader dr = comm.ExecuteReader();
+                            if (dr.HasRows)
+                            {
+                                NpgsqlConnection conn7 = new NpgsqlConnection("Server=localhost;Port=5432;Database=Stacja_narciarska;User Id=postgres;Password=rowery;");
+                                conn7.Open();
+                                NpgsqlCommand comm2 = new NpgsqlCommand();
+                                comm2.Connection = conn7;
+                                comm2.CommandType = CommandType.Text;
+                                comm2.CommandText = "INSERT INTO public.historia(data, sposob_wejscia,  rozklad_wyciagu_id_rozklad, bilet_id_bilet) SELECT current_timestamp, 'bilet', id_rozklad, '" + narciarz_ID.Text + "'  FROM public.rozklad_wyciagu rz INNER JOIN public.wyciag wy on wy.id_wyciag = rz.id_wyciag WHERE wy.nazwa_wyciagu='" + wybrany_wyciag.Text + "'";
+                                comm2.ExecuteNonQuery();
+
+
+                                comm2.Dispose();
+                                conn7.Close();
+                                MessageBox.Show("Mozna wejsc na stok.");
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Dane ID nie istnieje.");
+                            }
                         }
+
 
                         comm.Dispose();
                         conn.Close();

@@ -109,8 +109,8 @@ namespace Skaner
             this.rodzajWejscia.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.rodzajWejscia.FormattingEnabled = true;
             this.rodzajWejscia.Items.AddRange(new object[] {
-            "Bilet",
-            "Karnet"});
+            "bilet",
+            "karnet"});
             this.rodzajWejscia.Location = new System.Drawing.Point(243, 206);
             this.rodzajWejscia.Name = "rodzajWejscia";
             this.rodzajWejscia.Size = new System.Drawing.Size(329, 46);
